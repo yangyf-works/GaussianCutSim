@@ -1,0 +1,530 @@
+[
+  {
+    "tool": "tool_1",
+    "kind": "feed",
+    "start": [
+      -31.0,
+      -23.0,
+      5.0
+    ],
+    "end": [
+      -31.0,
+      -23.0,
+      -2.0
+    ],
+    "role": "approach"
+  },
+  {
+    "tool": "tool_1",
+    "kind": "feed",
+    "start": [
+      -31,
+      -23
+    ],
+    "end": [
+      31,
+      -23
+    ],
+    "depth": -2.0,
+    "role": "cut"
+  },
+  {
+    "tool": "tool_1",
+    "kind": "feed",
+    "start": [
+      31.0,
+      -23.0,
+      -2.0
+    ],
+    "end": [
+      31.0,
+      -23.0,
+      5.0
+    ],
+    "role": "retract"
+  },
+  {
+    "tool": "tool_2",
+    "kind": "feed",
+    "start": [
+      30.0,
+      -14.0,
+      5.0
+    ],
+    "end": [
+      30.0,
+      -14.0,
+      -3.2
+    ],
+    "role": "approach"
+  },
+  {
+    "tool": "tool_2",
+    "kind": "feed",
+    "start": [
+      30,
+      -14
+    ],
+    "end": [
+      -30,
+      -7
+    ],
+    "depth": -3.2,
+    "role": "cut"
+  },
+  {
+    "tool": "tool_2",
+    "kind": "feed",
+    "start": [
+      -30.0,
+      -7.0,
+      -3.2
+    ],
+    "end": [
+      -30.0,
+      -7.0,
+      5.0
+    ],
+    "role": "retract"
+  },
+  {
+    "tool": "tool_3",
+    "kind": "feed",
+    "start": [
+      -30.0,
+      4.0,
+      5.0
+    ],
+    "end": [
+      -30.0,
+      4.0,
+      -6.0
+    ],
+    "role": "approach"
+  },
+  {
+    "tool": "tool_3",
+    "kind": "feed",
+    "start": [
+      -30,
+      4
+    ],
+    "end": [
+      30,
+      4
+    ],
+    "depth": -6.0,
+    "role": "cut"
+  },
+  {
+    "tool": "tool_3",
+    "kind": "feed",
+    "start": [
+      30.0,
+      4.0,
+      -6.0
+    ],
+    "end": [
+      30.0,
+      4.0,
+      5.0
+    ],
+    "role": "retract"
+  },
+  {
+    "tool": "tool_4",
+    "kind": "feed",
+    "start": [
+      -21.0,
+      -25.0,
+      5.0
+    ],
+    "end": [
+      -21.0,
+      -25.0,
+      -4.0
+    ],
+    "role": "approach"
+  },
+  {
+    "tool": "tool_4",
+    "kind": "feed",
+    "start": [
+      -21,
+      -25
+    ],
+    "end": [
+      -21,
+      25
+    ],
+    "depth": -4.0,
+    "role": "cut"
+  },
+  {
+    "tool": "tool_4",
+    "kind": "feed",
+    "start": [
+      -21.0,
+      25.0,
+      -4.0
+    ],
+    "end": [
+      -21.0,
+      25.0,
+      5.0
+    ],
+    "role": "retract"
+  },
+  {
+    "tool": "tool_5",
+    "kind": "feed",
+    "start": [
+      -30.0,
+      18.0,
+      5.0
+    ],
+    "end": [
+      -30.0,
+      18.0,
+      -3.0
+    ],
+    "role": "approach"
+  },
+  {
+    "tool": "tool_5",
+    "kind": "feed",
+    "start": [
+      -30,
+      18
+    ],
+    "end": [
+      30,
+      -5
+    ],
+    "depth": -3.0,
+    "role": "cut"
+  },
+  {
+    "tool": "tool_5",
+    "kind": "feed",
+    "start": [
+      30.0,
+      -5.0,
+      -3.0
+    ],
+    "end": [
+      30.0,
+      -5.0,
+      5.0
+    ],
+    "role": "retract"
+  },
+  {
+    "tool": "tool_5",
+    "kind": "feed",
+    "start": [
+      30.0,
+      14.0,
+      5.0
+    ],
+    "end": [
+      30.0,
+      14.0,
+      -2.8
+    ],
+    "role": "approach"
+  },
+  {
+    "tool": "tool_5",
+    "kind": "feed",
+    "start": [
+      30,
+      14
+    ],
+    "end": [
+      -30,
+      -12
+    ],
+    "depth": -2.8,
+    "role": "cut"
+  },
+  {
+    "tool": "tool_5",
+    "kind": "feed",
+    "start": [
+      -30.0,
+      -12.0,
+      -2.8
+    ],
+    "end": [
+      -30.0,
+      -12.0,
+      5.0
+    ],
+    "role": "retract"
+  },
+  {
+    "tool": "tool_6",
+    "kind": "feed",
+    "start": [
+      -30.0,
+      14.0,
+      5.0
+    ],
+    "end": [
+      -30.0,
+      14.0,
+      -2.0
+    ],
+    "role": "approach"
+  },
+  {
+    "tool": "tool_6",
+    "kind": "feed",
+    "start": [
+      -30,
+      14
+    ],
+    "end": [
+      30,
+      14
+    ],
+    "depth": -2.0,
+    "role": "cut"
+  },
+  {
+    "tool": "tool_6",
+    "kind": "feed",
+    "start": [
+      30.0,
+      14.0,
+      -2.0
+    ],
+    "end": [
+      30.0,
+      14.0,
+      5.0
+    ],
+    "role": "retract"
+  },
+  {
+    "tool": "tool_6",
+    "kind": "feed",
+    "start": [
+      20.0,
+      -25.0,
+      5.0
+    ],
+    "end": [
+      20.0,
+      -25.0,
+      -2.0
+    ],
+    "role": "approach"
+  },
+  {
+    "tool": "tool_6",
+    "kind": "feed",
+    "start": [
+      20,
+      -25
+    ],
+    "end": [
+      20,
+      25
+    ],
+    "depth": -2.0,
+    "role": "cut"
+  },
+  {
+    "tool": "tool_6",
+    "kind": "feed",
+    "start": [
+      20.0,
+      25.0,
+      -2.0
+    ],
+    "end": [
+      20.0,
+      25.0,
+      5.0
+    ],
+    "role": "retract"
+  },
+  {
+    "tool": "tool_7",
+    "kind": "feed",
+    "start": [
+      -32.0,
+      24.0,
+      5.0
+    ],
+    "end": [
+      -32.0,
+      24.0,
+      -1.5
+    ],
+    "role": "approach"
+  },
+  {
+    "tool": "tool_7",
+    "kind": "feed",
+    "start": [
+      -32,
+      24
+    ],
+    "end": [
+      32,
+      24
+    ],
+    "depth": -1.5,
+    "role": "cut"
+  },
+  {
+    "tool": "tool_7",
+    "kind": "feed",
+    "start": [
+      32.0,
+      24.0,
+      -1.5
+    ],
+    "end": [
+      32.0,
+      24.0,
+      5.0
+    ],
+    "role": "retract"
+  },
+  {
+    "tool": "tool_7",
+    "kind": "feed",
+    "start": [
+      32.0,
+      20.0,
+      5.0
+    ],
+    "end": [
+      32.0,
+      20.0,
+      -1.5
+    ],
+    "role": "approach"
+  },
+  {
+    "tool": "tool_7",
+    "kind": "feed",
+    "start": [
+      32,
+      20
+    ],
+    "end": [
+      -32,
+      20
+    ],
+    "depth": -1.5,
+    "role": "cut"
+  },
+  {
+    "tool": "tool_7",
+    "kind": "feed",
+    "start": [
+      -32.0,
+      20.0,
+      -1.5
+    ],
+    "end": [
+      -32.0,
+      20.0,
+      5.0
+    ],
+    "role": "retract"
+  },
+  {
+    "tool": "tool_7",
+    "kind": "feed",
+    "start": [
+      -30.0,
+      28.0,
+      5.0
+    ],
+    "end": [
+      -30.0,
+      28.0,
+      -1.5
+    ],
+    "role": "approach"
+  },
+  {
+    "tool": "tool_7",
+    "kind": "feed",
+    "start": [
+      -30,
+      28
+    ],
+    "end": [
+      30,
+      10
+    ],
+    "depth": -1.5,
+    "role": "cut"
+  },
+  {
+    "tool": "tool_7",
+    "kind": "feed",
+    "start": [
+      30.0,
+      10.0,
+      -1.5
+    ],
+    "end": [
+      30.0,
+      10.0,
+      5.0
+    ],
+    "role": "retract"
+  },
+  {
+    "tool": "tool_7",
+    "kind": "feed",
+    "start": [
+      -25.0,
+      -28.0,
+      5.0
+    ],
+    "end": [
+      -25.0,
+      -28.0,
+      -1.5
+    ],
+    "role": "approach"
+  },
+  {
+    "tool": "tool_7",
+    "kind": "feed",
+    "start": [
+      -25,
+      -28
+    ],
+    "end": [
+      -25,
+      28
+    ],
+    "depth": -1.5,
+    "role": "cut"
+  },
+  {
+    "tool": "tool_7",
+    "kind": "feed",
+    "start": [
+      -25.0,
+      28.0,
+      -1.5
+    ],
+    "end": [
+      -25.0,
+      28.0,
+      5.0
+    ],
+    "role": "retract"
+  }
+]

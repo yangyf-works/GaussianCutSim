@@ -1,0 +1,73 @@
+[
+  {
+    "tool": "flat_1",
+    "kind": "feed",
+    "start": [-14, -5, 5],
+    "end": [-14, -5, -2],
+    "stage": 0,
+    "label": "平底溝：突込み",
+    "feed": 150
+  },
+  {
+    "tool": "flat_1",
+    "kind": "feed",
+    "start": [-14, -5, -2],
+    "end": [14, -5, -2],
+    "stage": 0,
+    "label": "平底溝：直線加工",
+    "feed": 300
+  },
+  {
+    "tool": "flat_1",
+    "kind": "feed",
+    "start": [14, -5, -2],
+    "end": [14, -5, 5],
+    "stage": 0,
+    "label": "平底溝：引上げ",
+    "feed": 300
+  },
+  {
+    "tool": "ball_2",
+    "kind": "toolchange",
+    "start": [14, -5, 5],
+    "end": [14, -5, 5],
+    "stage": 1,
+    "label": "退避位置でBall D4へ交換"
+  },
+  {
+    "tool": "ball_2",
+    "kind": "rapid",
+    "start": [14, -5, 5],
+    "end": [-14, 5, 5],
+    "stage": 1,
+    "label": "丸底溝の開始位置へ移動",
+    "feed": 1500
+  },
+  {
+    "tool": "ball_2",
+    "kind": "feed",
+    "start": [-14, 5, 5],
+    "end": [-14, 5, -0.6],
+    "stage": 1,
+    "label": "丸底溝：突込み",
+    "feed": 150
+  },
+  {
+    "tool": "ball_2",
+    "kind": "feed",
+    "start": [-14, 5, -0.6],
+    "end": [14, 5, -0.6],
+    "stage": 1,
+    "label": "丸底溝：直線加工",
+    "feed": 300
+  },
+  {
+    "tool": "ball_2",
+    "kind": "feed",
+    "start": [14, 5, -0.6],
+    "end": [14, 5, 5],
+    "stage": 1,
+    "label": "丸底溝：引上げ",
+    "feed": 300
+  }
+]

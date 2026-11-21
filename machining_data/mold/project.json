@@ -1,0 +1,27 @@
+{
+  "schema_version": 2,
+  "name": "金型5工程",
+  "description": "外形・上面・キャビティ荒加工・自由曲面仕上げ・細部加工。フラット工具でボール工具胴部の通過範囲を先行加工し、軸方向0.30 mm・半径方向0.05 mmの余裕を確保。外形は3 mmずつ加工し、底部に保持用の3 mm厚を残す。",
+  "units": "mm",
+  "stock": {
+    "lower": [
+      -40.0,
+      -40.0,
+      -15.0
+    ],
+    "upper": [
+      60.0,
+      50.0,
+      0.0
+    ]
+  },
+  "stages": [
+    "1. Rounded mold plate / T1 Flat D12",
+    "2. Top facing / T1 Flat D12",
+    "3. Cavity rough + shank clearance / T3 Flat D6.1",
+    "4. Freeform cavity finish / T2 Ball D6",
+    "5. Detail rest rough + ball finish / T5 Flat D4.1 + T4 Ball D4"
+  ],
+  "tools": "tools.json",
+  "toolpath": "toolpath.json"
+}

@@ -1,0 +1,27 @@
+{
+  "defaults": {
+    "gs_sampling": {
+      "mode": "auto",
+      "diameter_divisions": 12,
+      "ball_angle_deg": 10.0
+    }
+  },
+  "tools": [
+    {
+      "id": "flat_1",
+      "tool_id": 1,
+      "type": "flat",
+      "radius": 2.0,
+      "cutting_range": {"start": 0.0, "end": 6.0},
+      "flute_length": 6.0
+    },
+    {
+      "id": "ball_2",
+      "tool_id": 2,
+      "type": "ball",
+      "radius": 2.0,
+      "cutting_range": {"start": 0.0, "end": 2.0},
+      "flute_length": 2.0
+    }
+  ]
+}

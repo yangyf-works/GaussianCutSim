@@ -1,0 +1,134 @@
+GaussianCutSim 加工データ作成用プロンプト
+
+使い方
+1. 下の「コピー用プロンプト」をAIへ貼り付け、加工条件を記入してください。
+2. 同じフォルダにある machining_example/ 内のJSON 3ファイルも参考として渡してください。
+3. 生成された3ファイルを machining_data/my_project/ に保存してください。
+4. リポジトリのルートから、以下をコマンドプロンプトで実行してください。
+
+読み込み確認（GPU計算は実行しません）：
+.venv\Scripts\python.exe -c "from cutsim.core.machining_data import load_project; p=load_project('machining_data/my_project'); print(p.name, len(p.program), 'cutting blocks')"
+
+起動：
+.venv\Scripts\python.exe run_app.py --project machining_data/my_project
+
+同梱例をそのまま開く場合：
+.venv\Scripts\python.exe run_app.py --project examples/machining_example
+
+同梱例は40 x 24 x 8 mmの素材に、Flat工具の平底溝とBall工具の浅い丸底溝を
+加工する例です。2工具・2工程・切削送り6ブロック、全8ブロックです。
+既存の three_axis_program.json は --program で読む簡易形式です。
+以下では素材・工具・経路を分ける --project 用の3ファイル形式を使用します。
+
+================ コピー用プロンプト ================
+
+GaussianCutSimで読み込める切削シミュレーション用の加工データを作成してください。
+添付のJSON例と以下の仕様に従い、project.json・tools.json・toolpath.jsonを
+それぞれ省略のない、UTF-8の有効なJSONとして出力してください。
+説明やコメントはJSONの外に書き、JSON内にはコメント・末尾カンマ・NaN・Infinityを入れないでください。
+このデータはシミュレーション入力です。工作機械用のNCプログラムではありません。
+
+【今回の加工条件：ここを記入】
+・加工名：
+・素材の寸法またはXYZの最小値・最大値：
+・目標形状と寸法、加工する面、残したい部分：
+・使用工具の種類（flat / ball）と直径、切削長：
+・工程（荒加工、仕上げなど）：
+・最大切込み、パス間隔、曲線の直線近似間隔：
+・工具姿勢：指定がなければ3軸、工具軸+Z
+・退避位置・高さ：
+・希望する切削送りブロック数の上限：
+・その他の条件：
+
+重要な形状・寸法が不明なら先に質問してください。
+それ以外に仮定した条件は、生成したデータと一緒に明記してください。
+
+【共通の座標と動作】
+・単位はmm。start/endのXYZは共通のワーク座標系における工具先端位置です。
+・ボール工具も球中心ではなく最下端を指定します。
+・基本は素材上面Z=0、素材内部を負のZ、工具軸を先端からシャンク方向の+Zとしてください。
+・各ブロックは直線移動です。円弧・曲面の経路は必要な精度で直線分割してください。
+・切削計算の対象はkind="feed"だけです。材料に接触する突込み・引上げもfeedにしてください。
+・rapidとtoolchangeは経路情報として保存されますが、材料を除去しません。
+・ブロック間の移動は自動生成されません。前ブロックのendと次ブロックのstartを一致させ、
+  必要な退避・早送り・工具交換を明示してください。feedのゼロ長移動は作らないでください。
+・早送りは材料から離れた位置で行い、工具交換は退避位置でstart=endにしてください。
+・feedの数値は正の送り設定値です。現在は送り値に基づく加工時間再現はしません。
+
+【project.json】
+オブジェクトとして次を指定してください。
+・schema_version: 2
+・name: 空でない加工名
+・description: 加工内容と前提条件
+・units: "mm"
+・stock: {"lower": [xmin, ymin, zmin], "upper": [xmax, ymax, zmax]}
+  各軸でlower < upper。値はすべて有限の数値にしてください。
+・tools: "tools.json"
+・toolpath: "toolpath.json"
+・stages: 工程名の配列。toolpathのstageはこの配列の0始まりの番号です。
+3ファイルは同じ加工データフォルダへ保存し、外部のファイルを参照しないでください。
+
+【tools.json】
+トップレベルを {"defaults": {...}, "tools": [...]} としてください。
+defaultsには共通のGS設定だけを置きます。指定がなければ以下を使用してください。
+"defaults": {"gs_sampling": {"mode": "auto", "diameter_divisions": 12, "ball_angle_deg": 10.0}}
+
+各工具に必要な項目：
+・id: "flat_1"など、工具参照用の重複しない文字列
+・tool_id: 表示番号。1から始まる重複しない整数を使用してください。
+・type: "flat" または "ball"
+・radius: 正の工具半径。直径を指定された場合は2で割ってください。
+・cutting_range: {"start": 0.0, "end": 切削長}
+  工具先端から工具軸に沿った距離で、0 <= start < endです。
+・flute_length: 表示用の刃長。例ではcutting_range.endと揃えてください。
+
+注意：
+・材料を除去する範囲はcutting_rangeで決まり、flute_lengthだけを増やしても広がりません。
+・Ball工具の半球だけを切削範囲にする場合はstart=0、end=radiusです。
+・cut_cylinder=falseは使用できません。通常はcut_cylinder自体を省略してください。
+・gs_sampling.mode="auto"ではpitch_mmを省略します。
+・固定ピッチが必要な場合だけmode="fixed"と正のpitch_mmを指定してください。
+・工具のGSサンプリング設定にはgs_samplingを使用してください。
+
+【toolpath.json】
+トップレベルはブロックの配列です。各ブロックは次の形式にしてください。
+{
+  "tool": "flat_1",
+  "kind": "feed",
+  "start": [-10, 0, -1],
+  "end": [10, 0, -1],
+  "stage": 0,
+  "label": "溝加工",
+  "feed": 300
+}
+・toolはtools.jsonのidを参照します。tool_idの数値を入れないでください。
+・kindは"feed" / "rapid" / "toolchange"のいずれかです。
+・start/endはXYZの3要素を基本とし、同じブロック内で要素数を揃えてください。
+・XYZを使う場合はdepthを併記しないでください。
+・stageは0以上、stages配列の範囲内の整数です。
+・radius、tool_type、flute_length、cutting_range、gs_samplingは経路側へ埋め込まないでください。
+
+【割出し加工を依頼した場合のみ】
+・固定姿勢の3+2軸加工に対応します。切削中に姿勢が変わる同時5軸は対応しません。
+・start/endを[X, Y, Z, A, B]とする場合、角度は度、姿勢はR_y(B) R_x(A)です。
+  A=B=0は+Z、A=0/B=90は+X、A=90/B=0は-Yです。
+・同じfeedブロックのstart/endでA・Bを一致させてください。
+・代わりにXYZのstart/endと"tool_axis": [tx, ty, tz]も使えます。
+  ベクトルは有限かつ非ゼロで、先端からシャンクへ向かう方向です。
+・XYZABとtool_axisを併記しないでください。
+・姿勢変更は材料から十分退避したrapidで表現してください。
+
+【生成後の確認】
+・工具参照、工具番号、工程番号、ブロック間の連続性を確認してください。
+・工具半径を考慮し、指定した残存形状を削り過ぎない経路にしてください。
+・球面仕上げでは接触点をそのまま工具先端にせず、工具半径と工具軸を考慮してください。
+  接触点P、外向き単位法線n、半径R、単位工具軸tなら、仕上げ時の工具先端はP+R*n-R*tです。
+・先行工程で除去した材料と残存材料を考慮してください。
+・切削範囲外の工具胴部やホルダー等の衝突は、現在のツールでは自動判定しません。
+  切削範囲外へ材料を残したまま工具を通す経路は避けてください。
+・3ファイルの完全なJSONに続けて、素材寸法、工具一覧、工程一覧、
+  全ブロック数、feedブロック数、仮定した条件を簡潔に示してください。
+・コード実行環境がある場合はload_projectで読み込みを確認してください。
+  実行していない読み込み・切削計算・衝突検査を「検証済み」と記載しないでください。
+
+================ コピー用プロンプトここまで ================

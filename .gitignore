@@ -216,3 +216,38 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# GaussianCutSim-specific additions (keep the original template above)
+/.venv*/
+*.whl
+
+# Generated outputs and local reports
+/tmp/
+/output/
+/validation-results/
+/records/
+/recordings/
+/reports/
+/screenshots/
+*.jsonl*
+/*.npz
+/*.npy
+/*.pkl
+/*.pickle
+/*.zip
+*.tmp
+*.temp
+*.bak
+*~
+
+# Local settings and credentials
+.env.*
+/.codex/
+/.agents/
+/.idea/
+/.vscode/
+/AGENTS.md
+*.pem
+*.p12
+*.pfx
+*.key

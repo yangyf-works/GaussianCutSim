@@ -1,0 +1,27 @@
+{
+  "schema_version": 2,
+  "name": "浅い曲面金型 5工程",
+  "units": "mm",
+  "description": "角材から長円形の浅いキャビティを加工。上面ならし、段荒取り、削り残し除去、底と壁の曲面仕上げ。",
+  "stock": {
+    "lower": [
+      -24.0,
+      -15.0,
+      -10.0
+    ],
+    "upper": [
+      24.0,
+      15.0,
+      0.0
+    ]
+  },
+  "stages": [
+    "1. 上面ならし / T1 Flat D8",
+    "2. キャビティ段荒取り / T1 Flat D8",
+    "3. 肩・底の削り残し除去 / T2 Flat D4",
+    "4. 底の輪郭仕上げ / T3 Ball D6",
+    "5. 壁の等高線仕上げ / T3 Ball D6"
+  ],
+  "tools": "tools.json",
+  "toolpath": "toolpath.json"
+}

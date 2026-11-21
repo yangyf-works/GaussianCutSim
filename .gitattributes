@@ -1,0 +1,3 @@
+# Keep source checkouts consistent across Windows and Unix.
+* text=auto eol=lf
+*.bat text eol=crlf

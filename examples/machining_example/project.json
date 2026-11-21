@@ -1,0 +1,13 @@
+{
+  "schema_version": 2,
+  "name": "入力例：平底溝と丸底溝",
+  "description": "40×24×8 mmの素材にFlat D4の深さ2 mmの平底溝とBall D4の深さ0.6 mmの丸底溝を加工。工具軸+Z、退避高さZ=5 mm。",
+  "units": "mm",
+  "stock": {
+    "lower": [-20, -12, -8],
+    "upper": [20, 12, 0]
+  },
+  "stages": ["平底溝", "丸底溝"],
+  "tools": "tools.json",
+  "toolpath": "toolpath.json"
+}

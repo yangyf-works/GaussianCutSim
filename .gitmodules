@@ -1,0 +1,4 @@
+[submodule "Open3D"]
+	path = Open3D
+	url = https://github.com/yangyf-works/Open3D-2Cut2DGS.git
+	branch = codex/open3d-2cut2dgs

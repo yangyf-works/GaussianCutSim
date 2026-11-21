@@ -1,0 +1,27 @@
+{
+  "schema_version": 2,
+  "name": "割り出し5軸 5姿勢",
+  "units": "mm",
+  "description": "同じワークに上面・右側面・正面・左側面と45度の固定姿勢で加工。割出しはワーク外の退避位置で行う。",
+  "stock": {
+    "lower": [
+      -8.0,
+      -8.0,
+      -8.0
+    ],
+    "upper": [
+      8.0,
+      8.0,
+      8.0
+    ]
+  },
+  "stages": [
+    "1. Top groove",
+    "2. Right groove",
+    "3. Front groove",
+    "4. Left diagonal groove",
+    "5. 45 degree corner finish"
+  ],
+  "tools": "tools.json",
+  "toolpath": "toolpath.json"
+}

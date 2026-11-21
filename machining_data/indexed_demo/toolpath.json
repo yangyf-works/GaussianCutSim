@@ -1,0 +1,842 @@
+[
+  {
+    "tool": "tool_1",
+    "kind": "rapid",
+    "start": [
+      40.0,
+      -40.0,
+      40.0,
+      0.0,
+      0.0
+    ],
+    "end": [
+      -5.0,
+      0.0,
+      42.0,
+      0.0,
+      0.0
+    ],
+    "stage": 0,
+    "label": "Outside approach",
+    "feed": 3000.0
+  },
+  {
+    "tool": "tool_1",
+    "kind": "rapid",
+    "start": [
+      -5.0,
+      0.0,
+      42.0,
+      0.0,
+      0.0
+    ],
+    "end": [
+      -5.0,
+      0.0,
+      12.0,
+      0.0,
+      0.0
+    ],
+    "stage": 0,
+    "label": "Approach along tool axis",
+    "feed": 3000.0
+  },
+  {
+    "tool": "tool_1",
+    "kind": "feed",
+    "start": [
+      -5.0,
+      0.0,
+      12.0,
+      0.0,
+      0.0
+    ],
+    "end": [
+      -5.0,
+      0.0,
+      7.0,
+      0.0,
+      0.0
+    ],
+    "stage": 0,
+    "label": "Top groove entry",
+    "feed": 180.0
+  },
+  {
+    "tool": "tool_1",
+    "kind": "feed",
+    "start": [
+      -5.0,
+      0.0,
+      7.0,
+      0.0,
+      0.0
+    ],
+    "end": [
+      5.0,
+      0.0,
+      7.0,
+      0.0,
+      0.0
+    ],
+    "stage": 0,
+    "label": "Top groove",
+    "feed": 180.0
+  },
+  {
+    "tool": "tool_1",
+    "kind": "feed",
+    "start": [
+      5.0,
+      0.0,
+      7.0,
+      0.0,
+      0.0
+    ],
+    "end": [
+      5.0,
+      0.0,
+      12.0,
+      0.0,
+      0.0
+    ],
+    "stage": 0,
+    "label": "Top groove retract",
+    "feed": 180.0
+  },
+  {
+    "tool": "tool_1",
+    "kind": "rapid",
+    "start": [
+      5.0,
+      0.0,
+      12.0,
+      0.0,
+      0.0
+    ],
+    "end": [
+      5.0,
+      0.0,
+      42.0,
+      0.0,
+      0.0
+    ],
+    "stage": 0,
+    "label": "Outside retreat",
+    "feed": 3000.0
+  },
+  {
+    "tool": "tool_1",
+    "kind": "rapid",
+    "start": [
+      5.0,
+      0.0,
+      42.0,
+      0.0,
+      0.0
+    ],
+    "end": [
+      40.0,
+      -40.0,
+      40.0,
+      0.0,
+      0.0
+    ],
+    "stage": 0,
+    "label": "Park before indexing",
+    "feed": 3000.0
+  },
+  {
+    "tool": "tool_1",
+    "kind": "rapid",
+    "start": [
+      40.0,
+      -40.0,
+      40.0,
+      0.0,
+      0.0
+    ],
+    "end": [
+      40.0,
+      -40.0,
+      40.0,
+      0.0,
+      90.0
+    ],
+    "stage": 1,
+    "label": "Index A0 B90 outside stock",
+    "feed": 3000.0
+  },
+  {
+    "tool": "tool_1",
+    "kind": "rapid",
+    "start": [
+      40.0,
+      -40.0,
+      40.0,
+      0.0,
+      90.0
+    ],
+    "end": [
+      42.0,
+      -5.0,
+      0.0,
+      0.0,
+      90.0
+    ],
+    "stage": 1,
+    "label": "Outside approach",
+    "feed": 3000.0
+  },
+  {
+    "tool": "tool_1",
+    "kind": "rapid",
+    "start": [
+      42.0,
+      -5.0,
+      0.0,
+      0.0,
+      90.0
+    ],
+    "end": [
+      12.0,
+      -5.0,
+      0.0,
+      0.0,
+      90.0
+    ],
+    "stage": 1,
+    "label": "Approach along tool axis",
+    "feed": 3000.0
+  },
+  {
+    "tool": "tool_1",
+    "kind": "feed",
+    "start": [
+      12.0,
+      -5.0,
+      0.0,
+      0.0,
+      90.0
+    ],
+    "end": [
+      7.0,
+      -5.0,
+      0.0,
+      0.0,
+      90.0
+    ],
+    "stage": 1,
+    "label": "Right groove entry",
+    "feed": 180.0
+  },
+  {
+    "tool": "tool_1",
+    "kind": "feed",
+    "start": [
+      7.0,
+      -5.0,
+      0.0,
+      0.0,
+      90.0
+    ],
+    "end": [
+      7.0,
+      5.0,
+      0.0,
+      0.0,
+      90.0
+    ],
+    "stage": 1,
+    "label": "Right groove",
+    "feed": 180.0
+  },
+  {
+    "tool": "tool_1",
+    "kind": "feed",
+    "start": [
+      7.0,
+      5.0,
+      0.0,
+      0.0,
+      90.0
+    ],
+    "end": [
+      12.0,
+      5.0,
+      0.0,
+      0.0,
+      90.0
+    ],
+    "stage": 1,
+    "label": "Right groove retract",
+    "feed": 180.0
+  },
+  {
+    "tool": "tool_1",
+    "kind": "rapid",
+    "start": [
+      12.0,
+      5.0,
+      0.0,
+      0.0,
+      90.0
+    ],
+    "end": [
+      42.0,
+      5.0,
+      0.0,
+      0.0,
+      90.0
+    ],
+    "stage": 1,
+    "label": "Outside retreat",
+    "feed": 3000.0
+  },
+  {
+    "tool": "tool_1",
+    "kind": "rapid",
+    "start": [
+      42.0,
+      5.0,
+      0.0,
+      0.0,
+      90.0
+    ],
+    "end": [
+      40.0,
+      -40.0,
+      40.0,
+      0.0,
+      90.0
+    ],
+    "stage": 1,
+    "label": "Park before indexing",
+    "feed": 3000.0
+  },
+  {
+    "tool": "tool_1",
+    "kind": "rapid",
+    "start": [
+      40.0,
+      -40.0,
+      40.0,
+      0.0,
+      90.0
+    ],
+    "end": [
+      40.0,
+      -40.0,
+      40.0,
+      90.0,
+      0.0
+    ],
+    "stage": 2,
+    "label": "Index A90 B0 outside stock",
+    "feed": 3000.0
+  },
+  {
+    "tool": "tool_1",
+    "kind": "rapid",
+    "start": [
+      40.0,
+      -40.0,
+      40.0,
+      90.0,
+      0.0
+    ],
+    "end": [
+      -5.0,
+      -42.0,
+      0.0,
+      90.0,
+      0.0
+    ],
+    "stage": 2,
+    "label": "Outside approach",
+    "feed": 3000.0
+  },
+  {
+    "tool": "tool_1",
+    "kind": "rapid",
+    "start": [
+      -5.0,
+      -42.0,
+      0.0,
+      90.0,
+      0.0
+    ],
+    "end": [
+      -5.0,
+      -12.0,
+      0.0,
+      90.0,
+      0.0
+    ],
+    "stage": 2,
+    "label": "Approach along tool axis",
+    "feed": 3000.0
+  },
+  {
+    "tool": "tool_1",
+    "kind": "feed",
+    "start": [
+      -5.0,
+      -12.0,
+      0.0,
+      90.0,
+      0.0
+    ],
+    "end": [
+      -5.0,
+      -7.0,
+      0.0,
+      90.0,
+      0.0
+    ],
+    "stage": 2,
+    "label": "Front groove entry",
+    "feed": 180.0
+  },
+  {
+    "tool": "tool_1",
+    "kind": "feed",
+    "start": [
+      -5.0,
+      -7.0,
+      0.0,
+      90.0,
+      0.0
+    ],
+    "end": [
+      5.0,
+      -7.0,
+      0.0,
+      90.0,
+      0.0
+    ],
+    "stage": 2,
+    "label": "Front groove",
+    "feed": 180.0
+  },
+  {
+    "tool": "tool_1",
+    "kind": "feed",
+    "start": [
+      5.0,
+      -7.0,
+      0.0,
+      90.0,
+      0.0
+    ],
+    "end": [
+      5.0,
+      -12.0,
+      0.0,
+      90.0,
+      0.0
+    ],
+    "stage": 2,
+    "label": "Front groove retract",
+    "feed": 180.0
+  },
+  {
+    "tool": "tool_1",
+    "kind": "rapid",
+    "start": [
+      5.0,
+      -12.0,
+      0.0,
+      90.0,
+      0.0
+    ],
+    "end": [
+      5.0,
+      -42.0,
+      0.0,
+      90.0,
+      0.0
+    ],
+    "stage": 2,
+    "label": "Outside retreat",
+    "feed": 3000.0
+  },
+  {
+    "tool": "tool_1",
+    "kind": "rapid",
+    "start": [
+      5.0,
+      -42.0,
+      0.0,
+      90.0,
+      0.0
+    ],
+    "end": [
+      40.0,
+      -40.0,
+      40.0,
+      90.0,
+      0.0
+    ],
+    "stage": 2,
+    "label": "Park before indexing",
+    "feed": 3000.0
+  },
+  {
+    "tool": "tool_1",
+    "kind": "rapid",
+    "start": [
+      40.0,
+      -40.0,
+      40.0,
+      90.0,
+      0.0
+    ],
+    "end": [
+      40.0,
+      -40.0,
+      40.0,
+      0.0,
+      -90.0
+    ],
+    "stage": 3,
+    "label": "Index A0 B-90 outside stock",
+    "feed": 3000.0
+  },
+  {
+    "tool": "tool_1",
+    "kind": "rapid",
+    "start": [
+      40.0,
+      -40.0,
+      40.0,
+      0.0,
+      -90.0
+    ],
+    "end": [
+      -42.0,
+      -4.0,
+      -3.0,
+      0.0,
+      -90.0
+    ],
+    "stage": 3,
+    "label": "Outside approach",
+    "feed": 3000.0
+  },
+  {
+    "tool": "tool_1",
+    "kind": "rapid",
+    "start": [
+      -42.0,
+      -4.0,
+      -3.0,
+      0.0,
+      -90.0
+    ],
+    "end": [
+      -12.0,
+      -4.0,
+      -3.0,
+      0.0,
+      -90.0
+    ],
+    "stage": 3,
+    "label": "Approach along tool axis",
+    "feed": 3000.0
+  },
+  {
+    "tool": "tool_1",
+    "kind": "feed",
+    "start": [
+      -12.0,
+      -4.0,
+      -3.0,
+      0.0,
+      -90.0
+    ],
+    "end": [
+      -7.0,
+      -4.0,
+      -3.0,
+      0.0,
+      -90.0
+    ],
+    "stage": 3,
+    "label": "Left diagonal groove entry",
+    "feed": 180.0
+  },
+  {
+    "tool": "tool_1",
+    "kind": "feed",
+    "start": [
+      -7.0,
+      -4.0,
+      -3.0,
+      0.0,
+      -90.0
+    ],
+    "end": [
+      -7.0,
+      4.0,
+      3.0,
+      0.0,
+      -90.0
+    ],
+    "stage": 3,
+    "label": "Left diagonal groove",
+    "feed": 180.0
+  },
+  {
+    "tool": "tool_1",
+    "kind": "feed",
+    "start": [
+      -7.0,
+      4.0,
+      3.0,
+      0.0,
+      -90.0
+    ],
+    "end": [
+      -12.0,
+      4.0,
+      3.0,
+      0.0,
+      -90.0
+    ],
+    "stage": 3,
+    "label": "Left diagonal groove retract",
+    "feed": 180.0
+  },
+  {
+    "tool": "tool_1",
+    "kind": "rapid",
+    "start": [
+      -12.0,
+      4.0,
+      3.0,
+      0.0,
+      -90.0
+    ],
+    "end": [
+      -42.0,
+      4.0,
+      3.0,
+      0.0,
+      -90.0
+    ],
+    "stage": 3,
+    "label": "Outside retreat",
+    "feed": 3000.0
+  },
+  {
+    "tool": "tool_1",
+    "kind": "rapid",
+    "start": [
+      -42.0,
+      4.0,
+      3.0,
+      0.0,
+      -90.0
+    ],
+    "end": [
+      40.0,
+      -40.0,
+      40.0,
+      0.0,
+      -90.0
+    ],
+    "stage": 3,
+    "label": "Park before indexing",
+    "feed": 3000.0
+  },
+  {
+    "tool": "tool_2",
+    "kind": "toolchange",
+    "start": [
+      40.0,
+      -40.0,
+      40.0,
+      0.0,
+      -90.0
+    ],
+    "end": [
+      40.0,
+      -40.0,
+      40.0,
+      0.0,
+      -90.0
+    ],
+    "stage": 4,
+    "label": "Tool change outside stock",
+    "feed": 3000.0
+  },
+  {
+    "tool": "tool_2",
+    "kind": "rapid",
+    "start": [
+      40.0,
+      -40.0,
+      40.0,
+      0.0,
+      -90.0
+    ],
+    "end": [
+      40.0,
+      -40.0,
+      40.0,
+      0.0,
+      45.0
+    ],
+    "stage": 4,
+    "label": "Index A0 B45 outside stock",
+    "feed": 3000.0
+  },
+  {
+    "tool": "tool_2",
+    "kind": "rapid",
+    "start": [
+      40.0,
+      -40.0,
+      40.0,
+      0.0,
+      45.0
+    ],
+    "end": [
+      31.94873734,
+      -4.0,
+      31.94873734,
+      0.0,
+      45.0
+    ],
+    "stage": 4,
+    "label": "Outside approach",
+    "feed": 3000.0
+  },
+  {
+    "tool": "tool_2",
+    "kind": "rapid",
+    "start": [
+      31.94873734,
+      -4.0,
+      31.94873734,
+      0.0,
+      45.0
+    ],
+    "end": [
+      10.73553391,
+      -4.0,
+      10.73553391,
+      0.0,
+      45.0
+    ],
+    "stage": 4,
+    "label": "Approach along tool axis",
+    "feed": 3000.0
+  },
+  {
+    "tool": "tool_2",
+    "kind": "feed",
+    "start": [
+      10.73553391,
+      -4.0,
+      10.73553391,
+      0.0,
+      45.0
+    ],
+    "end": [
+      7.2,
+      -4.0,
+      7.2,
+      0.0,
+      45.0
+    ],
+    "stage": 4,
+    "label": "45 degree corner finish entry",
+    "feed": 180.0
+  },
+  {
+    "tool": "tool_2",
+    "kind": "feed",
+    "start": [
+      7.2,
+      -4.0,
+      7.2,
+      0.0,
+      45.0
+    ],
+    "end": [
+      7.2,
+      4.0,
+      7.2,
+      0.0,
+      45.0
+    ],
+    "stage": 4,
+    "label": "45 degree corner finish",
+    "feed": 180.0
+  },
+  {
+    "tool": "tool_2",
+    "kind": "feed",
+    "start": [
+      7.2,
+      4.0,
+      7.2,
+      0.0,
+      45.0
+    ],
+    "end": [
+      10.73553391,
+      4.0,
+      10.73553391,
+      0.0,
+      45.0
+    ],
+    "stage": 4,
+    "label": "45 degree corner finish retract",
+    "feed": 180.0
+  },
+  {
+    "tool": "tool_2",
+    "kind": "rapid",
+    "start": [
+      10.73553391,
+      4.0,
+      10.73553391,
+      0.0,
+      45.0
+    ],
+    "end": [
+      31.94873734,
+      4.0,
+      31.94873734,
+      0.0,
+      45.0
+    ],
+    "stage": 4,
+    "label": "Outside retreat",
+    "feed": 3000.0
+  },
+  {
+    "tool": "tool_2",
+    "kind": "rapid",
+    "start": [
+      31.94873734,
+      4.0,
+      31.94873734,
+      0.0,
+      45.0
+    ],
+    "end": [
+      40.0,
+      -40.0,
+      40.0,
+      0.0,
+      45.0
+    ],
+    "stage": 4,
+    "label": "Park before indexing",
+    "feed": 3000.0
+  }
+]

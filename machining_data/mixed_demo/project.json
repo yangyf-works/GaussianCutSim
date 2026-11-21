@@ -1,0 +1,20 @@
+{
+  "schema_version": 2,
+  "name": "Flat/Ball 12工程",
+  "description": "12加工工程それぞれの突込み・加工・引上げ（36ブロック）。",
+  "units": "mm",
+  "stock": {
+    "lower": [
+      -40,
+      -32,
+      -12
+    ],
+    "upper": [
+      40,
+      32,
+      0
+    ]
+  },
+  "tools": "tools.json",
+  "toolpath": "toolpath.json"
+}

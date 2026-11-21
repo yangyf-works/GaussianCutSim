@@ -1,0 +1,48 @@
+{
+  "defaults": {
+    "gs_sampling": {
+      "mode": "auto",
+      "diameter_divisions": 12,
+      "ball_angle_deg": 10.0
+    }
+  },
+  "tools": [
+    {
+      "id": "tool_1",
+      "tool_id": 1,
+      "type": "flat",
+      "radius": 4.0,
+      "flute_length": 12.0,
+      "cutting_range": {
+        "start": 0.0,
+        "end": 12.0
+      }
+    },
+    {
+      "id": "tool_2",
+      "tool_id": 2,
+      "type": "flat",
+      "radius": 2.0,
+      "flute_length": 6.0,
+      "cutting_range": {
+        "start": 0.0,
+        "end": 6.0
+      }
+    },
+    {
+      "id": "tool_3",
+      "tool_id": 3,
+      "type": "ball",
+      "radius": 3.0,
+      "flute_length": 3.0,
+      "cutting_range": {
+        "start": 0.0,
+        "end": 3.0
+      },
+      "gs_sampling": {
+        "diameter_divisions": 16,
+        "ball_angle_deg": 7.5
+      }
+    }
+  ]
+}

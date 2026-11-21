@@ -1,0 +1,10 @@
+# Application dependencies for Windows x64 / Python 3.12.
+# setup.bat installs Open3D-2Cut2DGS separately; do not install standard Open3D.
+# CUDA component wheels are added by setup.bat unless --use-system-cuda is set.
+numpy==2.5.2
+scipy==1.18.1
+numba==0.67.0
+llvmlite==0.49.0
+cupy-cuda12x==14.2.0
+PySide6==6.12.0
+matplotlib==3.11.2
